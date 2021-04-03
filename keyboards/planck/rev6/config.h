@@ -139,4 +139,10 @@
 #define WS2812_DMA_STREAM STM32_DMA1_STREAM2
 #define WS2812_DMA_CHANNEL 2
 
+/*
+ * Mod tap settings
+ */
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_TERM 200
+
 #endif
