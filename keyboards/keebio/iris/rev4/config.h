@@ -74,3 +74,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLED_SPLIT { 6, 6 }
 // #define RGBLIGHT_ANIMATIONS
 #define RGBLIGHT_EFFECT_STATIC_GRADIENT
+
+/*
+ * Mod tap settings
+ */
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_TERM 200
+
