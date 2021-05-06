@@ -32,43 +32,43 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * | Adjust |   A  |   S  |  D   |   F  |   G  |                              |   H  |   J  |   K  |   L  | ;  : |  ' "   |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * | LS/Caps|   Z  |   X  |   C  |   V  |   B  |Tab/LC|LShift|  |LShift| BS   |   N  |   M  | ,  < | . >  | /  ? |  - _   |
+ * | LS/Caps|   Z  |   X  |   C  |   V  |   B  |Tab/LC|   =  |  |  _   | BS   |   N  |   M  | ,  < | . >  | /  ? |  - _   |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- *                        | Mute | Esc  | Lower| Enter| Esc  |  | Enter| Space| Raise| Del  | ScrLock|
- *                        |      |      |   TT | Shift| Raise|  | Lower|      |   TT | Mouse|        |
+ *                        | Mute | Esc  | Lower| Enter| Esc/~|  | Del  | Space| Raise| Del  | ScrLock|
+ *                        |      |      |   TT | Shift|      |  | Mouse|      |   TT | Mouse|        |
  *                        `----------------------------------'  `----------------------------------'
  */
     [_QWERTY] = LAYOUT(
       KC_TAB,       KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_PIPE,
       TT(_ADJUST),   KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                                         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-      LSft_T(KC_CAPS),KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_LSFT,   KC_LSFT, KC_BSPC, KC_LSFT, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_MINS,
-              KC_MUTE, KC_ESC, TT(_LOWER), LSft_T(KC_ENT), LT(_RAISE, KC_ESC), LT(_LOWER, KC_ENT), KC_SPC, TT(_RAISE), LT(_MOUSE, KC_DEL),  KC_SLCK
+      LSft_T(KC_CAPS),KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_EQL,   KC_UNDS, KC_BSPC, KC_LSFT, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_MINS,
+              KC_MUTE, KC_ESC, TT(_LOWER), LSft_T(KC_ENT), KC_GESC, LT(_MOUSE, KC_DEL), KC_SPC, TT(_RAISE), LT(_MOUSE, KC_DEL),  KC_SLCK
     ),
 /*
  * Lower Layer: Numbers and Arrows
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        |  !   |  @   |  UP   |  }   |  (   |                              |   )  |   7  |  8   |   9  |   0  |  | \   |
+ * |        |      |  MB1 |  UP  | MB2  |  (   |                              |   )  |   7  |  8   |   9  |   0  |  | \   |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        |  #   |  $   |  DOWN|  )   |  [   |                              |   ]  |   4  |  5   |  6   |  +   |  ' "   |
+ * |        |      | LEFT |  DOWN| RIGHT|  [   |                              |   ]  |   4  |  5   |  6   |  +   |  ' "   |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * |        |  %   |  ^   |  [   |  ]   |  {   |      |      |  |      |      |   }  |   1  |  2   |  3   |  -   | - _    |
+ * |        |      | CUT  | COPY | PASTE|  {   |      |      |  |      |      |   }  |   1  |  2   |  3   |  -   | - _    |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        |      |      |      |      |      |  |      |      |      |   0  |      |
  *                        `----------------------------------'  `----------------------------------'
  */
     [_LOWER] = LAYOUT(
-      _______, KC_EXLM, KC_AT,   KC_LCBR, KC_RCBR, KC_PIPE,                                     _______, _______, _______, _______, _______, KC_BSLS,
-      _______, KC_HASH, KC_DLR,  KC_LPRN, KC_RPRN, KC_GRV,                                      KC_PLUS, KC_MINS, KC_SLSH, KC_ASTR, KC_PERC, KC_QUOT,
-      _______, KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILD, _______, _______, _______, _______, KC_AMPR, KC_EQL,  KC_COMM, KC_DOT,  KC_SLSH, KC_MINS,
+      _______, _______, KC_AT,   KC_LCBR, KC_RCBR, KC_PIPE,                                     _______, _______, _______, _______, _______, KC_BSLS,
+      _______, _______, KC_DLR,  KC_LPRN, KC_RPRN, KC_GRV,                                      KC_PLUS, KC_MINS, KC_SLSH, KC_ASTR, KC_PERC, KC_QUOT,
+      _______, _______, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILD, _______, _______, _______, _______, KC_AMPR, KC_EQL,  KC_COMM, KC_DOT,  KC_SLSH, KC_MINS,
                                  _______, _______, _______, KC_SCLN, KC_EQL,  KC_EQL,  KC_SCLN, _______, _______, _______
     ),
 /*
  * Raise Layer: Number keys, media, navigation
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        |   1  |  2   |  3   |  4   |  5   |                              |  6   |  7   |  8   |  9   |  0   |        |
+ * | ESC/~  |   1  |  2   |  3   |  4   |  5   |                              |  6   |  7   |  8   |  9   |  0   |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |        |      | Prev | Play | Next | VolUp|                              | Left | Down | Up   | Right|      |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
