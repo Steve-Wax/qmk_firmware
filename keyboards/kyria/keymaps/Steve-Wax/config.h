@@ -32,6 +32,11 @@
 // #define SPLIT_USB_DETECT
 // #define NO_USB_STARTUP_CHECK
 
+// EC11K encoders have a different resolution than other EC11 encoders.
+// When using the default resolution of 4, if you notice your encoder skipping
+// every other tick, lower the resolution to 2.
+#define ENCODER_RESOLUTION 2
+
 /*
  * Mod tap settings
  */
