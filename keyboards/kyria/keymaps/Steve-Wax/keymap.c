@@ -61,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_LOWER] = LAYOUT(
       XXXXXXX, XXXXXXX, KC_BTN1,   KC_UP, KC_BTN2, KC_LPRN,                                     KC_RPRN, KC_P7, KC_P8, KC_P9, KC_P0, KC_PGUP,
       XXXXXXX, XXXXXXX, KC_LEFT,  KC_DOWN, KC_RIGHT, KC_LBRC,                                     KC_RBRC, KC_P4, KC_P5, KC_P6, KC_PPLS, KC_PGDN,
-      XXXXXXX, XXXXXXX, KC_CUT, KC_COPY, KC_PASTE, KC_LCBR, _______, _______, _______, _______, KC_RCBR, KC_P1, KC_P2, KC_P3,  KC_PMNS, KC_HOME,
+      XXXXXXX, XXXXXXX, KC_CUT, LCTL(KC_C), LCTL(KC_V), KC_LCBR, _______, _______, _______, _______, KC_RCBR, KC_P1, KC_P2, KC_P3,  KC_PMNS, KC_HOME,
                                  _______, _______, _______, _______, _______, _______,  _______, _______, KC_P0, _______
     ),
 /*
@@ -70,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-------------------------------------------.                              ,-------------------------------------------.
  * | ESC/~  |   !  |  @   |  #   |  $   |  %   |                              |  ^   |  &   |  *   |  (   |  )   |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        |   `  |  -   |  _   |  \   |  _   |                              |  =   |PageU |Delete| Insert|NumLck|        |
+ * |        |   `  |  -   |  _   |  \   |  _   |                              |  =   |PageU |Delete|Insert|NumLck|        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
  * |        |PScrn |      |      |      |  -   |      |      |  |      |      |   +  |PageD | End  |Home  |      |        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
