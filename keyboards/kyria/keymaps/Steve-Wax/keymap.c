@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_LOWER] = LAYOUT(
       XXXXXXX, XXXXXXX, KC_BTN1,   KC_UP, KC_BTN2, KC_LPRN,                                     KC_RPRN, KC_7, KC_8, KC_9, KC_0, KC_PGUP,
-      XXXXXXX, KC_LGUI, LASLT_T(KC_LEFT),  LCTL_T(KC_DOWN), LSFT_T(KC_RIGHT), KC_LBRC,          KC_RBRC, RSFT_T(KC_4), RCTL_T(KC_5), RALT_T(KC_6), RGUI_T(KC_PPLS), KC_PGDN,
+      XXXXXXX, KC_LGUI, LALT_T(KC_LEFT),  LCTL_T(KC_DOWN), LSFT_T(KC_RIGHT), KC_LBRC,          KC_RBRC, RSFT_T(KC_4), RCTL_T(KC_5), RALT_T(KC_6), RGUI_T(KC_PPLS), KC_PGDN,
       XXXXXXX, LCTL(KC_Z), LCTL(KC_X), LCTL(KC_C), LCTL(KC_V), KC_LCBR, _______, _______, _______, _______, KC_RCBR, KC_1, KC_2, KC_3,  KC_PMNS, KC_HOME,
                                  _______, _______, _______, _______, _______, _______,  _______, _______, KC_P0, _______
     ),
@@ -80,7 +80,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_RAISE] = LAYOUT(
       KC_GESC, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,                                        KC_CIRC,    KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, XXXXXXX,
-      XXXXXXX, KC_GRV, KC_MINS, KC_UNDS, KC_BSLS, KC_UNDS,                                     KC_EQL, KC_PGUP, KC_DEL,   KC_INS, KC_NLCK, XXXXXXX,
+      XXXXXXX, LGUI_T(KC_GRV), LALT_T(KC_MINS), LCTL_T(KC_UNDS), LSFT_T(KC_BSLS), KC_UNDS,      KC_EQL, RSFT_T(KC_PGUP), RCTL_T(KC_DEL),  RALT_T(KC_INS), RGUI_T(KC_NLCK), XXXXXXX,
       XXXXXXX, KC_PSCR, XXXXXXX, XXXXXXX, XXXXXXX, KC_MINS, _______, _______, _______, _______, KC_PPLS, KC_PGDN, KC_END, KC_HOME, XXXXXXX, XXXXXXX,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
