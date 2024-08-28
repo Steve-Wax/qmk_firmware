@@ -17,23 +17,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-/* USB Device descriptor parameter */
-#define VENDOR_ID       0xCB10
-#define PRODUCT_ID      0x4256
-#define DEVICE_VER      0x0400
-#define MANUFACTURER    Keebio
-#define PRODUCT         Keebio Iris Rev. 4
-
-/* key matrix size */
-// Rows are doubled-up
-#define MATRIX_ROWS 10
-#define MATRIX_COLS 6
-
-// wiring of each half
-#define MATRIX_ROW_PINS { B1, F0, F5, F6, F7 }
-#define MATRIX_COL_PINS { F1, F4, D3, D2, B7, D4 }
-#define MATRIX_ROW_PINS_RIGHT { B1, B2, D2, F1, F4 }
-#define MATRIX_COL_PINS_RIGHT { D4, D7, D3, B7, F0, B3 }
 #define SPLIT_HAND_PIN D5
 #define QMK_ESC_OUTPUT F1
 #define QMK_ESC_INPUT B1

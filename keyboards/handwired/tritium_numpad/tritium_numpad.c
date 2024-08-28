@@ -16,6 +16,8 @@ void matrix_scan_kb(void) {
 
 void led_init_ports(void) {
     // * Set our LED pins as output
+    // Numlock LED
+    setPinOutput(F5);
     // Layer 0 LED
     setPinOutput(B4);
     // Layer 1 LED
@@ -27,6 +29,11 @@ void led_init_ports(void) {
 }
 
 void led_set_kb(uint8_t usb_led) {
+    if (IS_LED_ON(usb_led, USB_LED_NUM_LOCK)) {
+       writePinHigh(F5);
+    } else {
+       writePinLow(F5);
+    }
     if (IS_LAYER_ON(0)) {
         writePinHigh(B4);
     } else {
